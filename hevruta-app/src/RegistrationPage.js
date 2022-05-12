@@ -1,6 +1,6 @@
 import React from 'react'
 import { Formik } from 'formik';
-
+import { Form } from 'react-bootstrap';
 export default function RegistrationPage() {
 
 
@@ -99,6 +99,56 @@ export default function RegistrationPage() {
                             onChange={handleChange}
                             onBlur={handleBlur}
                         />
+                        <br />
+                        <label>עיר מגורים</label>
+                        <br />
+                        <input
+                            type="text"
+                            name="uCity"
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            placeholder='עיר מגורים'
+                        />
+                        <br />
+                        <label>מגדר</label>
+                        <br />
+                        <Form.Select aria-label="Default select example">
+                            <option>בחור או בחורה?</option>
+                            <option value="1">בחור</option>
+                            <option value="2">בחורה</option>
+                        </Form.Select>
+                        <br />
+                        <label>עיר מגורים</label>
+                        <br />
+                        <input
+                            type="text"
+                            name="uCity"
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            placeholder='עיר מגורים'
+                        />
+                         <br />
+                        <label>שנת פרישה</label>
+                        <br />
+                        <input
+                            type="number"
+                            name="uRetire"
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            placeholder='יש להזין שנה ב4 ספרות'
+                        />
+                        <br />
+                        <label>תחום קריירה</label>
+                        <br />
+                        <input
+                            type="text"
+                            name="uCareer"
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            placeholder='טקסט חופשי'
+                        />
+                        {/* תחומי עניין  (ניתן לבחור מספר אפשרויות. מכיוון שלא נוכל לנקוב בכל תחומי העניין, אנא השתמשו בסעיף "אחר" / "Other" לציון תחומים נוספים וגם להערות על תחומים שסימנתם) */}
+
                         {errors.password && touched.password && errors.password}
                         <button type="submit" disabled={isSubmitting}>
                             Submit
